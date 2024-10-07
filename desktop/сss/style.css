@@ -1,0 +1,191 @@
+@font-face {
+    font-family: 'FREESCPT';
+    src: url('../fonts/Freescpt/FREESCPT.eot');
+    src: url('../fonts/Freescpt/FREESCPT.eot') format('embedded-opentype'),
+         url('../fonts/Freescpt/FREESCPT.woff2') format('woff2'),
+         url('../fonts/Freescpt/FREESCPT.woff') format('woff'),
+         url('../fonts/Freescpt/FREESCPT.ttf') format('truetype'),
+         url('../fonts/Freescpt/FREESCPT.svg') format('svg');
+}
+@font-face {
+    font-family: 'Open_Sans';
+    src: url('../fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf');
+    src: url('../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf') format('truetype'),
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open_Sans';
+    font-size: 14px;
+}
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: 48px;
+    text-transform: uppercase;
+}
+h2 {
+    text-transform: uppercase;
+    color: rgb(91, 109, 237);
+    font-size: 30px;
+}
+
+/* Header */
+
+.logo {
+    padding: 10px;
+}
+
+.logo img {
+    width: 67px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+   
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    text-align: center;
+    
+}
+
+nav ul li {
+    display: flex;
+    font-weight: 600;
+    gap: 20px;
+}
+
+
+nav ul li a {
+    color: rgb(85, 85, 85);
+    text-decoration: none;
+    position: relative;
+}
+nav ul li a:hover {
+    color: rgb(91, 109, 237);
+}
+nav ul li a:hover::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 2px; 
+    background-color: rgb(91, 109, 237);
+    position: absolute;
+    bottom: -5px; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* Banner */
+#banner {
+    background-image: url(../images/bg-01.jpg);
+    background-size: cover; /* Розмір зображення відповідно до розміру контейнера */
+    background-position: center; /* Позиція зображення в центрі контейнера */
+    height: 100vh; /* Встановлюємо висоту секції на весь екран */
+    display: flex;
+    justify-content: center; /* Центруємо вміст по горизонталі */
+    align-items: center; /* Центруємо вміст по вертикалі */
+    text-align: center; /* Центруємо текст по центру */
+    color: rgb(255, 255, 255); /* Колір тексту */
+}
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: rgb(91, 109, 237);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+}
+/* section1 */
+#section1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section1-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+}
+/* section2 */
+
+#section2 {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    justify-content: center;
+    align-items: center;
+}
+.image-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-link:hover .overlay {
+    opacity: 0.7;
+}
+
+.image-link img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(91, 109, 237);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay::before {
+    content: 'ffff';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #fff;
+    font-size: 40px;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.overlay i {
+    display: none; /* Убираем иконку <i> */
+}
+
+/* section3 */
+#section3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+}
+/* section4 */
+#section4 {
+    background-color: rgba(91, 109, 237);
+    color: rgb(255, 255, 255);
+}
+#section4 h3 {
+    text-transform: uppercase;
+}
